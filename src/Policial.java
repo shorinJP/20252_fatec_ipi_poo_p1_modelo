@@ -44,6 +44,14 @@ public class Policial {
         this.energia = Math.min(this.energia + energia, 10);
     }
 
+    public void setResetaEnergia() {
+        this.energia = 10;
+    }
+
+    public void setResetaGranada() {
+        this.energia = 5;
+    }
+
     public String getNome() {
         return nome;
     }

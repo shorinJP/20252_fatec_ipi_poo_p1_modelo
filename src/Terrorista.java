@@ -46,6 +46,14 @@ public class Terrorista {
 
     }
 
+    public void setResetaEnergia() {
+        this.energia = 10;
+    }
+
+    public void setResetaGranada() {
+        this.energia = 5;
+    }
+
     public String getNome() {
         return nome;
     }
