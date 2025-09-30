@@ -35,6 +35,10 @@ public class Policial {
         this.energia = Math.max(this.energia - energia, 0);
         // this.energia -= energia;
     }
+    public void setMecanismoBomba(int energia) {
+        this.energia = Math.max(this.energia - energia, 0);
+        // this.energia -= energia;
+    }
 
     public void setEnergiaPassaVez(int energia) {
         this.energia = Math.min(this.energia + energia, 10);
@@ -55,8 +59,9 @@ public class Policial {
     }
 
 
-    public void desarmarBomba() {
+    public int desarmarBomba() {
         System.out.println(nome + " desarmando bomba... ");
+        return 1;
     }
 
     public void lancarGranada(int danoGranada) {

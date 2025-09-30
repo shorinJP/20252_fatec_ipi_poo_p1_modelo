@@ -12,9 +12,13 @@ public class App {
         int arma;
         int recuperar;
         int danoGranada;
-
+        int armarBomba;
+        int desarmarBomba;
+        
         while (p1.getEnergia() != 0 && p2.getEnergia() != 0) {
-
+            
+            armarBomba = 0;
+            desarmarBomba = 0;
             acao = gerador.nextInt(4) + 1;
             primeiro = gerador.nextInt(2) + 1;
             arma = gerador.nextInt(3) + 1;
@@ -77,10 +81,12 @@ public class App {
                     if (primeiro == 1) {
                         primeiro++;
                         p1.desarmarBomba();
+                        desarmarBomba = 1;
                         break;
                     } else {
                         p2.plantarBomba();
                         primeiro--;
+                        armarBomba = 1;
                         break;
                         
                     }
@@ -159,10 +165,12 @@ public class App {
                     if (primeiro == 1) {
                         primeiro++;
                         p1.desarmarBomba();
+                        desarmarBomba = 1;
                         break;
                     } else {
                         p2.plantarBomba();
                         primeiro--;
+                        armarBomba = 1;
                         break;
 
                     }
@@ -180,7 +188,16 @@ public class App {
                         break;
                     }
             }
+              //P2 plantou P1 n desarmou
+            if(armarBomba == 1 && desarmarBomba == 0 || desarmarBomba == 0 && armarBomba == 1){
+                p1.setMecanismoBomba(10);    
+            } //Se p1 desarmar e P2 n plantar 
 
+            // } //Se P2 plantar e P1 desarmar
+            else if(armarBomba == 1 && desarmarBomba == 1){
+                p2.setMecanismoBomba(10);
+            }
+            
             System.out.println("+++++++++++++++++++++++++++++++++++++++");
             System.out.printf("ENERGIA %s = %d  ENERGIA %s = %d\n", p1.getNome(), p1.getEnergia(), p2.getNome(),
                     p2.getEnergia());
