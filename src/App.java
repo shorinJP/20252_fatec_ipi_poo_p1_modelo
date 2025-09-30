@@ -21,8 +21,7 @@ public class App {
         String mapa;
         int opcaoMapa;
 
-        opcaoMapa = Integer
-                .parseInt(JOptionPane.showInputDialog("Escolha um mapa para jogar\n0 = Roma   1 = Fatec Ipiranga"));
+        opcaoMapa = Integer.parseInt(JOptionPane.showInputDialog("Escolha um mapa para jogar\n0 = Roma   1 = Fatec Ipiranga"));
 
         if (opcaoMapa == 0) {
             mapa = "em Roma";
@@ -258,4 +257,5 @@ public class App {
                     p1.getNome() + " perdeu a partida com " + p2Vence + " derrota(s) e " + p1Vence + " vitória(s)! ");
         }
     }
+
 }
