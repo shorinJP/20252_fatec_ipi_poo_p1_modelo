@@ -82,7 +82,7 @@ public class Policial {
     }
 
     public void atacar(String mapa) {
-        System.out.println(nome + " atacando com " + armamento + mapa);
+        System.out.println(nome + " atacando com " + armamento + " " + mapa);
     }
 
     public void passarAVez(String mapa) {
